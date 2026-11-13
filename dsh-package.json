@@ -1,0 +1,55 @@
+{
+  "manifest_version": 2,
+  "type": "plugin",
+  "id": "Whaoe123/dsh-go-mimo-balance",
+  "version": "0.2.0",
+  "channel": "stable",
+  "name": "小米余额（MiMo Balance）",
+  "description": "在 dsh-go 输入框上方状态条常驻显示小米 MiMo 账户余额，点开面板查看总可用 / 现金 / 赠送 / 可用授信 / 授信额度 / 冻结金额，支持手动刷新、60 秒缓存、低余额预警与分类错误提示。",
+  "runtime": {
+    "type": "plugin",
+    "engine": "dsh-host",
+    "entry": "lib/index.js",
+    "node": ">=20"
+  },
+  "entrypoints": {
+    "main": "lib/index.js",
+    "patch": "cordis.patch.yml"
+  },
+  "capabilities": [
+    "network",
+    "credentials.read",
+    "composer.strip",
+    "panel"
+  ],
+  "permissions": [
+    "network:https://api.xiaomimimo.com",
+    "filesystem.read:$DSH_HOME/.credentials.yaml"
+  ],
+  "dependencies": [],
+  "compatibility": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0",
+    "dshGoApp": ">=0.4.0"
+  },
+  "publisher": {
+    "id": "Whaoe123",
+    "provider": "github",
+    "url": "https://github.com/Whaoe123"
+  },
+  "security": {
+    "signed": false
+  },
+  "metadata": {
+    "category": "utility",
+    "tags": ["dsh-go", "mimo", "xiaomi", "balance", "composer-strip", "wallet"],
+    "repository": "Whaoe123/dsh-go-mimo-balance",
+    "homepage": "https://github.com/Whaoe123/dsh-go-mimo-balance",
+    "license": "MIT",
+    "icon": "wallet",
+    "requiresApiKey": "CUSTOM_XIAOMIMIMO_API_KEY"
+  },
+  "source": {
+    "provider": "github",
+    "repo": "Whaoe123/dsh-go-mimo-balance"
+  }
+}

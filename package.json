@@ -1,0 +1,60 @@
+{
+  "name": "local-mimo-balance",
+  "version": "0.2.0",
+  "description": "在 dsh-go 输入框上方显示小米 MiMo 账户余额，面板查看现金 / 赠金 / 授信 / 冻结明细",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "dsh-go",
+    "mimo",
+    "balance"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dshGo": {
+    "v": 1,
+    "title": {
+      "zh": "小米余额",
+      "en": "MiMo balance"
+    },
+    "icon": "wallet",
+    "contributes": {
+      "composer.strip": [
+        {
+          "id": "mimo-balance-strip",
+          "icon": "wallet",
+          "panel": "mimo-balance"
+        }
+      ],
+      "panels": [
+        {
+          "id": "mimo-balance",
+          "title": "小米余额",
+          "icon": "wallet",
+          "placement": [
+            "session.tab",
+            "features"
+          ]
+        }
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Whaoe123/dsh-go-mimo-balance.git"
+  },
+  "homepage": "https://github.com/Whaoe123/dsh-go-mimo-balance"
+}
