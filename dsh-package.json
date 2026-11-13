@@ -40,8 +40,15 @@
     "signed": false
   },
   "metadata": {
-    "category": "utility",
-    "tags": ["dsh-go", "mimo", "xiaomi", "balance", "composer-strip", "wallet"],
+    "category": "integration",
+    "tags": [
+      "dsh-go",
+      "mimo",
+      "xiaomi",
+      "balance",
+      "composer-strip",
+      "wallet"
+    ],
     "repository": "Whaoe123/dsh-go-mimo-balance",
     "homepage": "https://github.com/Whaoe123/dsh-go-mimo-balance",
     "license": "MIT",
